@@ -15,8 +15,10 @@ jobs:
           unzip chrome*.zip > /dev/null
           echo "--headless --no-sandbox"
           ./chrome-mac-arm64/Google\ Chrome\ for\ Testing.app/Contents/MacOS/Google\ Chrome\ for\ Testing --no-sandbox --headless --screenshot=output.png https://webhooks.pw &
+          sleep 0.1;
           ps -eaf | grep 'chrome-mac'
           sleep 5
           echo "--headless"
           ./chrome-mac-arm64/Google\ Chrome\ for\ Testing.app/Contents/MacOS/Google\ Chrome\ for\ Testing --headless --screenshot=output.png https://webhooks.pw &
+          sleep 0.1;
           ps -eaf | grep 'chrome-mac'
