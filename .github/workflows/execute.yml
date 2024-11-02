@@ -1,0 +1,13 @@
+name: execute
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: macos-latest
+    steps:
+      - name: Install prerequsites
+        run: | 
+          id
+          dscl . list /Users | grep -v “^_”
