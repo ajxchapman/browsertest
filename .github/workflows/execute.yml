@@ -14,7 +14,7 @@ jobs:
           curl -LO 'https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/mac-arm64/chrome-mac-arm64.zip'
           unzip chrome*.zip
           ./chrome-mac-arm64/Google\ Chrome\ for\ Testing.app/Contents/MacOS/Google\ Chrome\ for\ Testing --no-sandbox --headless --screenshot=output.png https://webhooks.pw &
-          ps -eaf
+          ps -eaf | grep 'chrome-mac'
           sleep 2
           ./chrome-mac-arm64/Google\ Chrome\ for\ Testing.app/Contents/MacOS/Google\ Chrome\ for\ Testing --headless --screenshot=output.png https://webhooks.pw &
-          ps -eaf
+          ps -eaf | grep 'chrome-mac'
