@@ -7,7 +7,7 @@ jobs:
   run:
     runs-on: macos-latest
     steps:
-      - name: Install prerequsites
+      - name: Run commands
         run: | 
           id
-          dscl . list /Users | grep -v “^_”
+          uname -a
