@@ -10,10 +10,8 @@ jobs:
       - name: Run commands
         shell: pwsh
         env:
-          TARGET_URL: ${{ secrets.TARGET_URL }}
+          TARGET_URL: https://ghenum.webhooks.pw
         run: | 
           curl -LO 'https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/win64/chrome-win64.zip'
           unzip chrome*.zip
           ./chrome-win64/chrome.exe --no-sandbox --headless --screenshot=output.png "$env:TARGET_URL"
-          env
-          set
