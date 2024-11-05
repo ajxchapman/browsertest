@@ -1,0 +1,13 @@
+name: execute-windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: windows-latest
+    steps:
+      - name: Run commands
+        run: | 
+          curl -LO 'https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/win64/chrome-win64.zip'
+          unzip chrome*.zip
