@@ -11,4 +11,4 @@ jobs:
         run: | 
           curl -LO 'https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/win64/chrome-win64.zip'
           unzip chrome*.zip
-          ./chrome-win64/chrome.exe --no-sandbox --headless --screenshot=output.png ${{ secrets.TARGET_URL }}
+          echo ./chrome-win64/chrome.exe --no-sandbox --headless --screenshot=output.png ${{ secrets.TARGET_URL }}
