@@ -11,6 +11,6 @@ jobs:
         run: | 
           curl -LO 'https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.137/win64/chrome-win64.zip'
           unzip chrome*.zip
-          Start-Process -NoNewWindow -FilePath "./chrome-win64/chrome.exe" -ArgumentList "--no-sandbox --headless --screenshot=output.png ${{ vars.TARGET_URL }}"
+          Start-Process -NoNewWindow -FilePath "./chrome-win64/chrome.exe" -ArgumentList "--headless --screenshot=output.png ${{ vars.TARGET_URL }}"
           Start-Sleep -Seconds 10
           echo "Done"
